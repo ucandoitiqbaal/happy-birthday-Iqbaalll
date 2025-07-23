@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Iqbaal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d1b2a;
+      color: #ffffff;
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .star {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      box-shadow: 0 0 8px white;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+      z-index: 2;
+    }
+    #message2 {
+      display: none;
+      margin-top: 20px;
+    }
+    button {
+      background-color: #1b263b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: 'Quicksand', sans-serif;
+    }
+    button:hover {
+      background-color: #415a77;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    for (let i = 0; i < 60; i++) {
+      let star = document.createElement("div");
+      star.className = "star";
+      star.style.top = Math.random() * 100 + "%";
+      star.style.left = Math.random() * 100 + "%";
+      star.style.animationDuration = (Math.random() * 2 + 1) + "s";
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <audio autoplay loop>
+    <source src="https://example.com/love_wave_to_earth.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h2>Hallo ka Iqbaal, terimakasih sudah bertahan sejauh ini 🤍</h2>
+    <button onclick="showMessage()">klik di sini ya ⭐</button>
+    <div id="message2">
+      <p>Happy birthday Iqbaal, aku harap Iqbaal panjang umur, sehat selalu, lancar rezekinya, semoga Iqbaal selalu dikelilingi oleh orang-orang baik yaa! semoga Iqbaal selalu jadi orang yang beruntung dalam hal apapun itu, be happy yaa manusia bintang 10 ✨</p>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message2").style.display = "block";
+    }
+  </script>
+</body>
+</html>
